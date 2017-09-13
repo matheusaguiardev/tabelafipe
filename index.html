@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Tabela FIPE</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h2 class="titulo">Tabela FIPE</h2>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Automóveis</h2>
+				<label for="filtrar-tabela">Filtre:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite a marca do automovel">
+				<table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Marca</th>
+							<th>Preço</th>
+							<th>Ano</th>
+							<th>Modelo</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-automovel">
+						
+					</tbody>
+				</table>
+				<span id="erro-ajax" class="invisivel">Erro ao buscar os automoveis</span>
+			</section>
+		</main>
+
+		<section class="container">
+		    <h2 id="titulo-form">Buscar automovel específico</h2>
+			<ul id="mensagens-erro"></ul>
+		    <form id="form-adiciona">
+		        <div class="">
+		            <label for="nome">Nome:</label>
+		            <input id="nome" name="nome" type="text" placeholder="digite o nome do automovel" class="campo">
+		        </div>
+		        <div class="grupo">
+		            <label for="marca">Marca:</label>
+		            <input id="marca" name="marca" type="text" placeholder="digite a marca do automovel" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="ano">Ano:</label>
+		            <input id="ano" name="ano" type="text" placeholder="digite o ano do automovel" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="modelo">Modelo:</label>
+		            <input id="modelo" type="text" placeholder="digite o modelo" class="campo campo-medio">
+		        </div>
+				
+				<button id="buscar-automovel" class="botao bto-principal">Buscar automovel</button>
+
+		    </form>
+		</section>
+
+		<script src="js/form.js" ></script>
+		<script src="js/filtra.js" ></script>
+		<script src="js/buscar-automovel.js" ></script>
+
+	</body>
+</html>
